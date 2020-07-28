@@ -1,5 +1,154 @@
 * {
 margin: 0;
 padding: 0;
+box-sizing: border-box;
+
+}
+h1{
+    margin: 15px 0;
+}
+body{
+  text-align: center;
+  background-color: oldlace;
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightgrey;
+    width: 100%;
+    z-index: 1;
+}
+.navigation img {
+    width: 100px;
+    border-radius: 50%;    
+}
+ ul{
+    list-style: none;
+    
+}
+p{
+    padding: 0 1.2em;
 }
 
+.links a{
+    margin: 5px 0;
+    display: block;
+    width: 100%;   
+    text-decoration: none; 
+    color: black;    
+}
+.links a:hover{
+    color: cornsilk;
+}
+.links li:hover{
+    background-color: rgb(44, 179, 149);
+    border-radius: 20%;
+    
+}
+main img {
+    width: 20em;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 0 10px 10px 0;
+    margin: 20px;
+}
+.topContent{
+    margin-top: 200px;
+}
+.footer {
+    margin-top: 20px;
+    border-top: solid lightslategray 3px;
+    background-color: lightgrey;
+}
+.footer img:hover{
+    transform: scale(1.5);
+}
+.footer img {
+    width: 40px;
+    margin: 15px;
+    
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*-----------------*/
+  /*Media     */
+  /*-----------------*/
+@media (min-width: 700px){
+    .navigation{
+        display: inline-block;
+    }
+    .navigation img {
+        float: left; 
+        margin: 5px;
+          
+    }
+    .navigation ul{
+       float: right;
+       margin: 20px; 
+       
+    }
+    .navigation li {
+        display: inline-block; 
+        border: white 1px solid;
+        margin: 0 5px;
+        padding: 5px;
+        border-radius: 20%;        
+    }
+    .topContent{
+        margin-top: 100px;
+    }
+}
+@media (min-width: 840px){
+    
+.topFirst,
+.topLast{
+    position: relative;
+    height: 300px;
+    margin: 30px;
+}
+.topFirst img{    
+   float: left;
+
+}
+.topLast img{
+    float: right;
+}
+.topFirst p,
+.topLast p{
+    padding: 0 35px;
+}
+.buttomContent{
+    clear: both;
+    position: relative;
+    height: 500px;
+}
+.buttomContent div{
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.footer{
+    clear: both;
+    margin-top: 30px;
+    
+}
+.footer img {
+    width: 40px;
+    margin: 25px;
+}
+    
+}
+@media (min-width: 1120px){
+    body{
+       
+    }
+    .buttomContent div{
+        width: 30%;
+    }
+}
