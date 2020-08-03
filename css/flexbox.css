@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    h1{
+        margin: 15px 0;
+        
+    }
+    body{
+      font-family: 'Karla', serif;
+      font-size: 18px;
+      text-align: center;
+      background-color: oldlace;
+      background: linear-gradient(to bottom, lightgrey, oldlace, lightgrey);
+    }
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*background-color: lightgrey;*/
+        background: linear-gradient(to top, rgba(211, 211, 211, 0.7 ),  rgb(211, 211, 211, 1));
+        width: 100%;
+        z-index: 1;
+        border-bottom: 1px solid lightslategray ;
+    }
+    .navigation img {
+        width: 100px;
+        border-radius: 50%;    
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+     ul{
+        list-style: none;
+        
+    }
+    p{
+        padding: 0 1.2em;
+    }
+    
+    .links a{
+        margin: 5px 0;
+        display: block;
+        width: 100%;   
+        text-decoration: none; 
+        color: black;    
+    }
+    .links li:hover{
+        transform: scale(1.2);
+    }
+    .links a:hover{
+        color: cornsilk;
+        
+    }
+    .links li:hover{
+        background-color: rgb(44, 179, 149);
+        border-radius: 20%;
+        
+    }
+    main img {
+        width: 18em;
+        border-radius: 20px;
+        border: solid 3px black;
+        box-shadow: 0 10px 10px 0;
+        margin: 20px;
+        
+    }
+    .topContent{
+        margin-top: 200px;
+    }
+    .footer {
+        margin-top: 20px;
+        border-top: solid lightslategray 3px;
+        background-color: lightgrey;
+    }
+    .footer img:hover{
+        animation: rotate-scale-up 0.65s linear both;
+        
+    }
+    .footer img {
+        width: 40px;
+        margin: 15px;
+        
+    }
+    
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /*-----------------*/
+      /*Media     */
+      /*-----------------*/
+    @media (min-width: 700px){
+        .navigation{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .links{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .navigation img {            
+            margin: 5px;              
+        }
+        .navigation ul{           
+           margin: 20px;            
+        }
+        .navigation li {
+            border: white 1px solid;
+            margin: 0 5px;
+            padding: 5px;
+            border-radius: 20%;        
+        }
+        .topContent{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .topFirst{
+            display: flex;   
+            align-items: center;
+                    
+        }
+        .topLast{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        .buttomContent{
+            display: flex;
+            flex-direction: column;
+        }
+        .buttom-div1,
+        .buttom-div2,
+        .buttom-div3{
+            display: flex;
+            align-items: center;            
+        }        
+        .buttom-div2{
+            flex-direction: row-reverse;
+        }
+    }
+    @media (min-width: 840px){
+        .buttom-div1,
+        .buttom-div2,
+        .buttom-div3{
+           flex-direction: column; 
+           align-items: center;  
+           flex-grow: 1;
+           width: min-content;
+
+        }  /*
+        .buttom-div1 div,
+        .buttom-div2 div,
+        .buttom-div3 div{
+          display: block; 
+
+        }   */
+        .buttomContent{
+            display: flex;
+            flex-direction: row;     
+            align-items: space-between; 
+            flex-grow: 1; 
+            flex-wrap: wrap; 
+        }            
+    }    
+    /*-------------*/
+    /*  Animations  */
+    /*-------------*/
+    .vibrate-1:hover {
+        animation: vibrate-1 0.3s linear infinite both;
+    }
+    
+    
+     @keyframes vibrate-1 {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(2px, 2px);
+        }
+        80% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+      @keyframes rotate-scale-up {
+        0% {
+          transform: scale(1) rotateZ(0);
+        }
+        50% {
+          transform: scale(2) rotateZ(180deg);
+        }
+        100% {
+          transform: scale(1) rotateZ(360deg);
+        }
+      }
+      
