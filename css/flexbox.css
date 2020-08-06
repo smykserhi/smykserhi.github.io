@@ -151,28 +151,19 @@
         }
     }
     @media (min-width: 840px){
-        .buttom-div1,
-        .buttom-div2,
-        .buttom-div3{
-           flex-direction: column; 
-           align-items: center;  
-           flex-grow: 1;
-           width: min-content;
-
-        }  /*
-        .buttom-div1 div,
-        .buttom-div2 div,
-        .buttom-div3 div{
-          display: block; 
-
-        }   */
         .buttomContent{
             display: flex;
             flex-direction: row;     
-            align-items: space-between; 
-            flex-grow: 1; 
+            justify-content: space-between;
             flex-wrap: wrap; 
         }            
+        .buttom-div1,
+        .buttom-div2,
+        .buttom-div3{
+           flex-direction: column;            
+           align-items: center;  
+           flex: 1 1  0px;
+          
     }    
     /*-------------*/
     /*  Animations  */
